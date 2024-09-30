@@ -120,3 +120,4 @@
 /Users/haivantuandinh/Desktop/LEARN_WEB/dotnet_angular/API/bin/Debug/net8.0/runtimes/win-arm64/native/e_sqlite3.dll
 /Users/haivantuandinh/Desktop/LEARN_WEB/dotnet_angular/API/bin/Debug/net8.0/runtimes/win-x64/native/e_sqlite3.dll
 /Users/haivantuandinh/Desktop/LEARN_WEB/dotnet_angular/API/bin/Debug/net8.0/runtimes/win-x86/native/e_sqlite3.dll
+/Users/haivantuandinh/Desktop/LEARN_WEB/dotnet_angular/API/obj/Debug/net8.0/API.sourcelink.json
