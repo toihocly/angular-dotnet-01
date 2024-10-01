@@ -9,3 +9,7 @@ create migrate Entities file to convert Data to ORM
 run dotnet
 
 > dotnet run
+
+update migrations after change new Entities
+
+> dotnet ef migrations add UserEntityUpdated
