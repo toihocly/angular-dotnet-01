@@ -1,21 +1,18 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<nav class="navbar navbar-expand-md navbar-primary fixed-top bg-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Datting</a>
-
+        <a class="navbar-brand" routerLink="/" routerLinkActive="active" >Datting</a>
+       
         @if (accountService.currentUser()) {
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
             <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#">Matches</a>
+                <a routerLink="/members" routerLinkActive="active" class="nav-link">Matches</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#">Lists</a>
+                <a routerLink="/lists" routerLinkActive="active" class="nav-link">Lists</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#">Messages</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#" (click)="handleLogout()">Logout</a>
+                <a routerLink="/messages" routerLinkActive="active" class="nav-link" >Messages</a>
             </li>
         </ul>
         }
@@ -23,7 +20,7 @@
 
         @if (accountService.currentUser()) {
             <div dropdown class="dropdown">
-                <a dropdownToggle class="dropdown-toggle text-light">Welcome user</a>
+                <a dropdownToggle class="dropdown-toggle text-light">Welcome {{accountService.currentUser()?.username | titlecase}}</a>
                 <div *dropdownMenu class="dropdown-menu">
                     <a class="dropdown-item">Edit profile</a>
                     <a class="dropdown-item" (click)="handleLogout()">Logout</a>
@@ -39,7 +36,7 @@
                 placeholder="Username" aria-label="Login">
             <input name="password" [(ngModel)]="model.password" class="form-control me-2" type="password"
                 placeholder="Password" aria-label="Password">
-            <button class="btn btn-outline-success" type="submit">Login</button>
+            <button class="btn btn-primary" type="submit">Login</button>
         </form>
         }
 
