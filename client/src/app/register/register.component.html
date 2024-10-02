@@ -1,0 +1,21 @@
+<form #registerForm="ngForm" (ngSubmit)="handleRegister()" autocomplete="false">
+    <h2 class="text-center text-primary">Sign up</h2>
+    <div class="form-group">
+        <label for="">Username</label>
+        <input [(ngModel)]="model.username" type="text" 
+          class="form-control" name="username" id="" aria-describedby="usernameId" placeholder="Enter your username">
+        <!-- <small id="usernameId" class="form-text text-muted">Help text</small> -->
+      </div>
+
+    <div class="form-group mt-3">
+      <label for="passswordId" >Password</label>
+      <input [(ngModel)]="model.password" type="password" class="form-control" name="password" id="passwordId" placeholder="Enter your password">
+    </div>
+
+    <div class="form-group mt-3 text-center">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button (click)="handleCancel()" type="button" class="btn btn-light">Cancel</button>
+    </div>
+
+
+</form>
