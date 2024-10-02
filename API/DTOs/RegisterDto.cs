@@ -5,7 +5,10 @@ namespace API.DTOs;
 
 public class RegisterDto
 {
-    public required string Username { get; set; }
+    [Required]
+    public string Username { get; set; } = string.Empty;
 
-    public required string Password { get; set; }
+    [Required]
+    [MaxLength(8), MinLength(4)]
+    public string Password { get; set; } = string.Empty;
 }

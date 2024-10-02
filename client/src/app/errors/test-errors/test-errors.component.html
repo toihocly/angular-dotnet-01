@@ -1,0 +1,25 @@
+<p>test-errors works!</p>
+<div>
+
+    <button type="button" class="btn btn-primary me-2" (click)="get400Error()">Test 400 erorr</button>
+
+    <button type="button" class="btn btn-primary me-2" (click)="get401Error()">Test 401 erorr</button>
+
+    <button type="button" class="btn btn-primary me-2" (click)="get404Error()">Test 404 erorr</button>
+
+    <button type="button" class="btn btn-primary me-2" (click)="get500Error()">Test 500 erorr</button>
+
+    <button type="button" class="btn btn-primary me-2" (click)="getValidationError()">Test Validation erorr</button>
+</div>
+
+@if (validationErrors.length > 0) {
+    <div class="mt-2">
+        <h3 class="text-primary">Validation Errors</h3>
+        <ul class="text-danger">
+            @for (error of validationErrors; track $index) {
+                <li>{{error}}</li>
+            }
+        </ul>
+    </div>
+}
+
