@@ -13,3 +13,15 @@ run dotnet
 update migrations after change new Entities
 
 > dotnet ef migrations add UserEntityUpdated
+
+remove migrations before
+
+> dotnet ef migrations remove
+
+add new migrations new Entities
+
+> dotnet ef migrations add UpdatedUserEntity
+
+drop the database
+
+> dotnet ef database drop
