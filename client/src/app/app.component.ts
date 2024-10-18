@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { AccountService } from './_services/account.service';
 import { HomeComponent } from './home/home.component';
+import { NgxSpinnerComponent } from 'ngx-spinner';
 
 interface AppUser {
   id: number;
@@ -16,7 +17,13 @@ interface AppUser {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, NavComponent, HomeComponent],
+  imports: [
+    RouterOutlet,
+    CommonModule,
+    NavComponent,
+    HomeComponent,
+    NgxSpinnerComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

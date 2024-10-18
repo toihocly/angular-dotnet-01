@@ -1,5 +1,5 @@
 <div class="row">
-    @for (item of users; track $index) {
+    @for (item of memberService.members(); track $index) {
        <div class="col-3">
         <app-member-card [member]="item"></app-member-card>
        </div> 
